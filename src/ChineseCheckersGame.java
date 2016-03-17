@@ -1,4 +1,3 @@
-// TODO (DONE) update comment (find a link to a description of the game in english)
 /**
  * it represents a game of chinese checkers. It's a One-on-one Game between 2 (or 
  * more, until 8 persons) persons. The object of the game is to put your pawns in the 
@@ -7,9 +6,9 @@
  */
 public class ChineseCheckersGame
 {
+	// TODO write comment
 	private Board board;
-
-	// TODO (DONE) write ChineseCheckersGame()
+	
 	/**
 	 * Creates a new Chinese checkers game, ready to be played (game board is in its 
 	 * starting configuration).
@@ -19,8 +18,6 @@ public class ChineseCheckersGame
 		this.board = new Board();
 	}
 	
-	// TODO (DONE) rename this method (ask for advice)
-	// TODO (DONE) update comment (what is the main algorithm?)
 	/**
 	 * Plays the game (Repetitive structure as long as ALL your pawns aren't in the opposite 
 	 * camp :
