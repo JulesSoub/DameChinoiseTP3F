@@ -7,7 +7,7 @@
 public class Board
 {
 	/**
-	 * Creates a new game board, in its starting configuration.
+	 * Creates a new game board, in its starting configuration : Pawns are in their own camp.
 	 */
 	public Board()
 	{

@@ -7,7 +7,7 @@
  */
 public class Main
 {
-	// TODO write comment
+	// TODO (DONE) write comment
 	
 	/**
 	 *  Application's main	
@@ -15,7 +15,7 @@ public class Main
 	 */
 	public static void main(String[] args)
 	{
-		new ChineseCheckersGame().play();
+		new ChineseCheckersGame(2).play();
 		
 	}
 }
