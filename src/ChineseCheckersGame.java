@@ -8,15 +8,15 @@
 public class ChineseCheckersGame
 {
 
-	// TODO clean comment, this tells nothing relevant
+	// TODO (DONE) clean comment, this tells nothing relevant
 	/**
-	 * Represents an object of Player type
+	 * All players on the Chinese Checkers Game
 	 */
 	private Player[] players;
 
-	// TODO clean comment, this tells nothing relevant
+	// TODO (DONE) clean comment, this tells nothing relevant
 	/**
-	 * Represents an object of Board type.
+	 * The game board.
 	 */
 	private Board board;
 
@@ -51,6 +51,7 @@ public class ChineseCheckersGame
 		{
 			do
 			{
+				
 				// <ask for current player move>;
 			}
 			while (!isMouvementValid());

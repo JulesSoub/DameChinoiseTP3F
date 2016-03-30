@@ -1,13 +1,14 @@
-// TODO write comment
+// TODO (DONE) write comment
 /**
+ * The players who play the Chinese Checkers Game.
  * @author soubeyju
  *
  */
 public class Player
 {
-	// TODO write comment
+	// TODO (DONE) write comment
 	/**
-	 * 
+	 * Create a new player in his starting configuration.
 	 */
 	public Player()
 	{
