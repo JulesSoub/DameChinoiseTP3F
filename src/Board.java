@@ -6,7 +6,50 @@
  */
 public class Board
 {
-	private int[][] grid;
+	private static final int BOARD_SIZE = 17;
+	
+	// @formatter:off
+	private final static BoardRowContent[] INITIAL_BOARD_CONTENT =
+			new BoardRowContent[]
+			{ 
+				// Row 0
+				new BoardRowContent
+				(
+						// row 0 columns content
+						new BoardColumnsContent[] 
+						{
+								new BoardColumnsContent(0,3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4,4, BoardLocationState.RED),
+								new BoardColumnsContent(5,16, BoardLocationState.FORBIDDEN),
+						}
+						
+				),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent(),
+				new BoardRowContent()
+			}
+			
+	// @formatter:on		
+
+	/**
+	 * grid[row][col]
+	 */
+	private BoardLocationState[][] boardLocations; 
+	
+	
 	
 	/**
 	 * Creates a new game board, in its starting configuration : Pawns are in their own camp.
@@ -30,6 +73,28 @@ public class Board
 		*  
 		*  
 		*/
+		this.boardLocations = new BoardLocationState[BOARD_SIZE][BOARD_SIZE];
+		this.setAllLocationsAsForbidden();
+		this.setEmptyCells();
+		this.setPlayersCells();
 		
+	}
+
+	private void setPlayersCells()
+	{
+		// Player1's cells initialization
+		
+	}
+
+	private void setEmptyCells()
+	{
+		
+	}
+
+	private void setAllLocationsAsForbidden()
+	{
+		for(int rowIndex = 0 ; rowIndex < BOARD_SIZE ; rowIndex++)
+			for(int columnIndex = 0 ; columnIndex < BOARD_SIZE ; columnIndex++)
+				this.boardLocations[rowIndex][columnIndex] = BoardLocationState.FORBIDDEN;
 	}
 }

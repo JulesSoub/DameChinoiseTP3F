@@ -4,7 +4,16 @@
  * @author soubeyju
  *
  */
-public enum Zones
+public enum BoardLocationState
 {
-
+	FORBIDDEN,
+	EMPTY,
+	RED,
+	YELLOW,
+	GREEN,
+	BLUE,
+	BLACK,
+	WHITE;
+	
+	
 }

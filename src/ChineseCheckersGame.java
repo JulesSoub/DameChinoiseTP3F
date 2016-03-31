@@ -47,14 +47,14 @@ public class ChineseCheckersGame
 	public void play()
 	{
 		System.out.println("Game started");
-		while (!isGameOver())
+		while (!this.isGameOver())
 		{
 			do
 			{
 				
 				// <ask for current player move>;
 			}
-			while (!isMouvementValid());
+			//while (!this.isMouvementValid());
 			// process move (compute new board state);
 			isGameOver();
 		}
@@ -76,6 +76,14 @@ public class ChineseCheckersGame
 	private boolean isMouvementValid(Mouvement move)
 	{
 		return false;
+	}
+
+	/**
+	 * @return players the array list which contain all players
+	 */
+	public Player[] getPlayers()
+	{
+		return players;
 	}
 
 }
