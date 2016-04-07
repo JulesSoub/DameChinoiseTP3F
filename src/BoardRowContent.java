@@ -9,6 +9,15 @@ public class BoardRowContent
 		this.boardColumnsContent = boardColumnsContent;
 				
 	}
+
+	public int getSize()
+	{
+		return boardColumnsContent.length;
+	}
 	
+	public BoardColumnsContent getBoardColumnsContent(int index)
+	{
+		return boardColumnsContent[index];
+	}
 
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 
 /**
  * this class represents a chinese checkers game board.
@@ -20,27 +22,186 @@ public class Board
 						{
 								new BoardColumnsContent(0,3, BoardLocationState.FORBIDDEN),
 								new BoardColumnsContent(4,4, BoardLocationState.RED),
-								new BoardColumnsContent(5,16, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(5,16, BoardLocationState.FORBIDDEN)
 						}
 						
 				),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent(),
-				new BoardRowContent()
-			}
+				// Row 1
+				new BoardRowContent
+				(
+						// row 1 columns content
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 5, BoardLocationState.RED),
+								new BoardColumnsContent(6, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				// Row 2
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 6, BoardLocationState.RED),
+								new BoardColumnsContent(7, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				//Row 3
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 7, BoardLocationState.RED),
+								new BoardColumnsContent(8, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				// Row 4
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 3, BoardLocationState.WHITE),
+								new BoardColumnsContent(4, 8, BoardLocationState.EMPTY),
+								new BoardColumnsContent(9, 12, BoardLocationState.YELLOW),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				//Row 5
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 0, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(1, 3, BoardLocationState.WHITE),
+								new BoardColumnsContent(4, 9, BoardLocationState.EMPTY),
+								new BoardColumnsContent(10, 12, BoardLocationState.YELLOW),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				// Row 6
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 1, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(2, 3, BoardLocationState.WHITE),
+								new BoardColumnsContent(4, 10, BoardLocationState.EMPTY),
+								new BoardColumnsContent(11, 12, BoardLocationState.YELLOW),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				// Row 7
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+						{
+								new BoardColumnsContent(0, 2, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(3, 3, BoardLocationState.WHITE),
+								new BoardColumnsContent(4, 11, BoardLocationState.EMPTY),
+								new BoardColumnsContent(12, 12, BoardLocationState.YELLOW),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+						}
+				),
+				// Row 8
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 12, BoardLocationState.EMPTY),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 9
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 4, BoardLocationState.BLUE),
+								new BoardColumnsContent(5, 12, BoardLocationState.EMPTY),
+								new BoardColumnsContent(13, 13, BoardLocationState.GREEN),
+								new BoardColumnsContent(14, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 10
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 5, BoardLocationState.BLUE),
+								new BoardColumnsContent(6, 12, BoardLocationState.EMPTY),
+								new BoardColumnsContent(13, 14, BoardLocationState.GREEN),
+								new BoardColumnsContent(15, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 11
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 6, BoardLocationState.BLUE),
+								new BoardColumnsContent(7, 12, BoardLocationState.EMPTY),
+								new BoardColumnsContent(13, 15, BoardLocationState.GREEN),
+								new BoardColumnsContent(16, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 12
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 3, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(4, 7, BoardLocationState.BLUE),
+								new BoardColumnsContent(8, 12, BoardLocationState.EMPTY),
+								new BoardColumnsContent(13, 16, BoardLocationState.GREEN)
+							}
+				),
+				// Row 13
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 8, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(9, 12, BoardLocationState.BLACK),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 14
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 9, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(10, 12, BoardLocationState.BLACK),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 15
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 10, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(11, 12, BoardLocationState.BLACK),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+							}
+				),
+				// Row 16
+				new BoardRowContent
+				(
+						new BoardColumnsContent[]
+							{
+								new BoardColumnsContent(0, 11, BoardLocationState.FORBIDDEN),
+								new BoardColumnsContent(12, 12, BoardLocationState.BLACK),
+								new BoardColumnsContent(13, 16, BoardLocationState.FORBIDDEN)
+							}
+				)
+			};
 			
 	// @formatter:on		
 
@@ -56,28 +217,20 @@ public class Board
 	 */
 	public Board()
 	{
-		/* 17 lignes, 121 emplacement :
-		*  ligne 1: 1 emplacement
-		*  2: 2
-		*  3: 3
-		*  4: 4
-		*  5: 13
-		*  6: 12
-		*  7: 11
-		*  8: 10
-		*  9: 9
-		*  10: 10
-		*  11: 11
-		*  12: 12
-		*  13: 13
-		*  
-		*  
-		*/
 		this.boardLocations = new BoardLocationState[BOARD_SIZE][BOARD_SIZE];
-		this.setAllLocationsAsForbidden();
-		this.setEmptyCells();
-		this.setPlayersCells();
 		
+		for(int boardRowIndex = 0 ; boardRowIndex < BOARD_SIZE ; boardRowIndex++)
+		{
+			BoardRowContent currentRowContent = INITIAL_BOARD_CONTENT[boardRowIndex];
+			for(int boardColumnsIndex = 0 ; boardColumnsIndex < currentRowContent.getSize() ; boardColumnsIndex++)
+			{
+				BoardColumnsContent currentColumnsContent = currentRowContent.getBoardColumnsContent(boardColumnsIndex);
+				for(int columnIndex = currentColumnsContent.getStartIndex() ; columnIndex <= currentColumnsContent.getEndIndex() ; columnIndex++)
+				{
+					this.boardLocations[boardRowIndex][columnIndex] = currentColumnsContent.getState();
+				}
+			}
+		}
 	}
 
 	private void setPlayersCells()
@@ -96,5 +249,27 @@ public class Board
 		for(int rowIndex = 0 ; rowIndex < BOARD_SIZE ; rowIndex++)
 			for(int columnIndex = 0 ; columnIndex < BOARD_SIZE ; columnIndex++)
 				this.boardLocations[rowIndex][columnIndex] = BoardLocationState.FORBIDDEN;
+	}
+
+	@Override
+	public String toString()
+	{
+		String strBoard = null;
+		
+		for(int rowIndex = 0 ; rowIndex < BOARD_SIZE ; rowIndex++)
+		{
+			for(int colIndex = 0 ; colIndex < BOARD_SIZE ; colIndex++)
+			{
+				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.FORBIDDEN)
+					strBoard += "   ";
+				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.EMPTY)
+					strBoard += " . ";
+				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.RED)
+					strBoard += " R ";
+				// ...
+					
+			}
+		}
+		return strBoard;
 	}
 }
