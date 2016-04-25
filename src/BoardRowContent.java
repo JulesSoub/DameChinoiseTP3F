@@ -12,12 +12,12 @@ public class BoardRowContent
 
 	public int getSize()
 	{
-		return boardColumnsContent.length;
+		return this.boardColumnsContent.length;
 	}
 	
 	public BoardColumnsContent getBoardColumnsContent(int index)
 	{
-		return boardColumnsContent[index];
+		return this.boardColumnsContent[index];
 	}
 
 }

@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import org.apache.commons.lang3.StringUtils;
+
 
 /**
  * this class represents a chinese checkers game board.
@@ -202,7 +204,8 @@ public class Board
 							}
 				)
 			};
-			
+	
+	private final static int[] SPACES_ON_ROW = {12,11,10,9,0,1,2,3,4,3,2,1,0,9,10,11,12};
 	// @formatter:on		
 
 	/**
@@ -254,21 +257,17 @@ public class Board
 	@Override
 	public String toString()
 	{
-		String strBoard = null;
+		String strBoard = "";
 		
 		for(int rowIndex = 0 ; rowIndex < BOARD_SIZE ; rowIndex++)
 		{
+			
+			strBoard += StringUtils.repeat(' ', this.SPACES_ON_ROW[rowIndex]);
+			
 			for(int colIndex = 0 ; colIndex < BOARD_SIZE ; colIndex++)
-			{
-				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.FORBIDDEN)
-					strBoard += "   ";
-				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.EMPTY)
-					strBoard += " . ";
-				if(this.boardLocations[rowIndex][colIndex] == BoardLocationState.RED)
-					strBoard += " R ";
-				// ...
-					
-			}
+				strBoard += this.boardLocations[rowIndex][colIndex].toString();
+			
+			strBoard += "\n";
 		}
 		return strBoard;
 	}

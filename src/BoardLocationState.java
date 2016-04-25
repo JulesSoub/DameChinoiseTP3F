@@ -6,14 +6,27 @@
  */
 public enum BoardLocationState
 {
-	FORBIDDEN,
-	EMPTY,
-	RED,
-	YELLOW,
-	GREEN,
-	BLUE,
-	BLACK,
-	WHITE;
+	FORBIDDEN(""),
+	EMPTY(" ."),
+	RED(" R"),
+	YELLOW(" J"),
+	GREEN(" V"),
+	BLUE(" B"),
+	BLACK(" N"),
+	WHITE(" W");
+	
+	private final String strState;
+	
+	private BoardLocationState(String strState)
+	{
+		this.strState = strState;
+	}
+
+	@Override
+	public String toString()
+	{
+		return this.strState;
+	}
 	
 	
 }

@@ -47,17 +47,9 @@ public class ChineseCheckersGame
 	public void play()
 	{
 		System.out.println("Game started");
-		while (!this.isGameOver())
-		{
-			do
-			{
-				
-				// <ask for current player move>;
-			}
-			//while (!this.isMouvementValid());
-			// process move (compute new board state);
-			isGameOver();
-		}
+		
+		System.out.println(new Board().toString());
+		
 		System.out.println("Game finished");
 	}
 
