@@ -6,12 +6,9 @@
  */
 public class Player
 {
-	// TODO (DONE) write comment
-	/**
-	 * Create a new player in his starting configuration.
-	 */
-	public Player()
+	public Mouvement askForMove()
 	{
-		
+
+		return new Mouvement();
 	}
 }

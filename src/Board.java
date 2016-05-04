@@ -235,25 +235,16 @@ public class Board
 			}
 		}
 	}
-
-	private void setPlayersCells()
+	
+	/**
+	 * @return boolean which allow the play operation to determine if the
+	 *         movement is valid
+	 */
+	public boolean isMouvementValid(Mouvement mouvement)
 	{
-		// Player1's cells initialization
-		
+		return false;
 	}
-
-	private void setEmptyCells()
-	{
-		
-	}
-
-	private void setAllLocationsAsForbidden()
-	{
-		for(int rowIndex = 0 ; rowIndex < BOARD_SIZE ; rowIndex++)
-			for(int columnIndex = 0 ; columnIndex < BOARD_SIZE ; columnIndex++)
-				this.boardLocations[rowIndex][columnIndex] = BoardLocationState.FORBIDDEN;
-	}
-
+	
 	@Override
 	public String toString()
 	{
@@ -270,5 +261,11 @@ public class Board
 			strBoard += "\n";
 		}
 		return strBoard;
+	}
+
+	public void processMove(Mouvement mouvement)
+	{
+		// TODO Auto-generated method stub
+		
 	}
 }

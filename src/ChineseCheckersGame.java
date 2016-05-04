@@ -32,7 +32,7 @@ public class ChineseCheckersGame
 		this.board = new Board();
 		this.players = new Player[nbPlayer];
 	}
-
+    // @formatter:off
 	/**
 	 * Plays the game (Repetitive structure as long as ALL your pawns aren't in
 	 * the opposite camp : - Movements (6 possibilities, with the possibility to
@@ -40,15 +40,33 @@ public class ChineseCheckersGame
 	 *
 	 * current player is player 1
 	 * 
-	 * while <not finished> while <move is not valid> <ask current player for
-	 * move> process move (compute new board state) <evaluate if game is over>
-	 * current player changes
+	 * while <not game is over>
+	 * 	do 
+	 *  	<ask current player for move>
+	 *  while <move is not valid> 
+	 *  <process move> (compute new board state) 
+	 * 	current player changes
 	 */
+    // @formatter:on
 	public void play()
 	{
+		int currentPlayerNumber = 0;
+		
 		System.out.println("Game started");
 		
 		System.out.println(new Board().toString());
+		
+		while(!this.isGameOver())
+		{
+			Mouvement mouvement = null;
+			do
+			{
+				mouvement = currentPlayer.askForMove();
+			}
+			while(!this.board.isMouvementValid(mouvement));
+			
+			this.board.processMove(mouvement);
+		}
 		
 		System.out.println("Game finished");
 	}
@@ -57,15 +75,6 @@ public class ChineseCheckersGame
 	 * @return boolean which represent the game state
 	 */
 	private boolean isGameOver()
-	{
-		return false;
-	}
-
-	/**
-	 * @return boolean which allow the play operation to determine if the
-	 *         movement is valid
-	 */
-	private boolean isMouvementValid(Mouvement move)
 	{
 		return false;
 	}
