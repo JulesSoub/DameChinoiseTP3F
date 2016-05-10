@@ -8,13 +8,11 @@
 public class ChineseCheckersGame
 {
 
-	// TODO (DONE) clean comment, this tells nothing relevant
 	/**
 	 * All players on the Chinese Checkers Game
 	 */
 	private Player[] players;
 
-	// TODO (DONE) clean comment, this tells nothing relevant
 	/**
 	 * The game board.
 	 */
@@ -27,6 +25,7 @@ public class ChineseCheckersGame
 	 * @param nbPlayer
 	 *            The number of player who plays the game
 	 */
+	// TODO rename parameter
 	public ChineseCheckersGame(int nbPlayer)
 	{
 		this.board = new Board();

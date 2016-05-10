@@ -15,8 +15,10 @@ public enum BoardLocationState
 	BLACK(" N"),
 	WHITE(" W");
 	
+	// TODO add javadoc comment
 	private final String strState;
 	
+	// TODO add javadoc comment
 	private BoardLocationState(String strState)
 	{
 		this.strState = strState;

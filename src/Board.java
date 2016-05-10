@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 import org.apache.commons.lang3.StringUtils;
 
 
@@ -10,8 +8,10 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class Board
 {
+	// TODO add javadoc comment
 	private static final int BOARD_SIZE = 17;
-	
+
+	// TODO add javadoc comment
 	// @formatter:off
 	private final static BoardRowContent[] INITIAL_BOARD_CONTENT =
 			new BoardRowContent[]
@@ -205,6 +205,7 @@ public class Board
 				)
 			};
 	
+	// TODO add javadoc comment
 	private final static int[] SPACES_ON_ROW = {12,11,10,9,0,1,2,3,4,3,2,1,0,9,10,11,12};
 	// @formatter:on		
 
@@ -212,8 +213,6 @@ public class Board
 	 * grid[row][col]
 	 */
 	private BoardLocationState[][] boardLocations; 
-	
-	
 	
 	/**
 	 * Creates a new game board, in its starting configuration : Pawns are in their own camp.
@@ -236,6 +235,7 @@ public class Board
 		}
 	}
 	
+	// TODO finish writing javadoc comment
 	/**
 	 * @return boolean which allow the play operation to determine if the
 	 *         movement is valid
@@ -263,6 +263,7 @@ public class Board
 		return strBoard;
 	}
 
+	// TODO add javadoc comment
 	public void processMove(Mouvement mouvement)
 	{
 		// TODO Auto-generated method stub
