@@ -11,7 +11,7 @@ public class ChineseCheckersGame
 	/**
 	 * All players on the Chinese Checkers Game
 	 */
-	private Player[] players;
+	private PlayerInput[] players;
 
 	/**
 	 * The game board.
@@ -29,7 +29,7 @@ public class ChineseCheckersGame
 	public ChineseCheckersGame(int nbPlayer)
 	{
 		this.board = new Board();
-		this.players = new Player[nbPlayer];
+		this.players = new PlayerInput[nbPlayer];
 	}
     // @formatter:off
 	/**
@@ -57,10 +57,10 @@ public class ChineseCheckersGame
 		
 		while(!this.isGameOver())
 		{
-			Mouvement mouvement = null;
+			Move mouvement = null;
 			do
 			{
-				mouvement = currentPlayer.askForMove();
+				mouvement = this.players[currentPlayerNumber].askForMove();
 			}
 			while(!this.board.isMouvementValid(mouvement));
 			
@@ -81,7 +81,7 @@ public class ChineseCheckersGame
 	/**
 	 * @return players the array list which contain all players
 	 */
-	public Player[] getPlayers()
+	public PlayerInput[] getPlayers()
 	{
 		return players;
 	}

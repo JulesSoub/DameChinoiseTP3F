@@ -240,7 +240,7 @@ public class Board
 	 * @return boolean which allow the play operation to determine if the
 	 *         movement is valid
 	 */
-	public boolean isMouvementValid(Mouvement mouvement)
+	public boolean isMouvementValid(Move mouvement)
 	{
 		return false;
 	}
@@ -264,7 +264,7 @@ public class Board
 	}
 
 	// TODO add javadoc comment
-	public void processMove(Mouvement mouvement)
+	public void processMove(Move mouvement)
 	{
 		// TODO Auto-generated method stub
 		
