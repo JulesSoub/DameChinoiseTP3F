@@ -242,7 +242,10 @@ public class Board
 	 */
 	public boolean isMouvementValid(Move mouvement)
 	{
-		return false;
+		if(this.boardLocations[mouvement.getStartPosition().getNumRow()][mouvement.getStartPosition().getNumCol()] != BoardLocationState.RED)
+			return false;
+			
+		return true;
 	}
 	
 	@Override

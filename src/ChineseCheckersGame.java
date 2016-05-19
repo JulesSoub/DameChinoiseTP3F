@@ -51,9 +51,22 @@ public class ChineseCheckersGame
 	{
 		int currentPlayerNumber = 0;
 		
+		this.players[0] = new PlayerInput(BoardLocationState.RED);
+		this.players[1] = new PlayerInput(BoardLocationState.BLACK);	
+		if(this.players.length == 4)
+		{
+			this.players[2] = new PlayerInput(BoardLocationState.WHITE);
+			this.players[3] = new PlayerInput(BoardLocationState.GREEN);
+			if(this.players.length == 6)
+			{
+				this.players[4] = new PlayerInput(BoardLocationState.BLUE);
+				this.players[5] = new PlayerInput(BoardLocationState.YELLOW);
+			}
+		}
+		
 		System.out.println("Game started");
 		
-		System.out.println(new Board().toString());
+		System.out.println(this.board.toString());
 		
 		while(!this.isGameOver())
 		{
