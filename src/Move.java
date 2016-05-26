@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class Move
 {
-	private List<Position> positions;
+	private List<ChineseCheckersBoardPosition> positions;
 	
 	/**
 	 * Create a new move of a pawn which is possible.
 	 */
-	public Move(List<Position> positions)
+	public Move(List<ChineseCheckersBoardPosition> positions)
 	{
 		this.positions = positions;
 	}
@@ -24,12 +24,12 @@ public class Move
 		return this.positions.size();
 	}
 	
-	public Position getStartPosition()
+	public ChineseCheckersBoardPosition getStartPosition()
 	{
 		return this.positions.get(0);
 	}
 	
-	public Position getEndPosition()
+	public ChineseCheckersBoardPosition getEndPosition()
 	{
 		return this.positions.get(this.positions.size()-1);
 	}

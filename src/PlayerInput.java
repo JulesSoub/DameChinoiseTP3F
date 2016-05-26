@@ -21,7 +21,7 @@ public class PlayerInput
 	// TODO add javadoc comment
 	public Move askForMove()
 	{
-		List<Position> positions = new ArrayList<Position>();
+		List<ChineseCheckersBoardPosition> positions = new ArrayList<ChineseCheckersBoardPosition>();
 				
 		String[] strArray;
 		
@@ -33,7 +33,15 @@ public class PlayerInput
 			String[] strArraySplit;
 			strArraySplit = strArray[strIndex].split("-");
 			
-			positions.add(new Position(Integer.parseInt(strArraySplit[0]), Integer.parseInt(strArraySplit[1])));
+			try
+			{
+				positions.add(new ChineseCheckersBoardPosition(Integer.parseInt(strArraySplit[0]), Integer.parseInt(strArraySplit[1])));
+			}
+			catch (Exception e)
+			{
+				System.out.println("Mouvement invalide !");
+				return null;
+			}
 		}
 		
 		return new Move(positions);

@@ -13,7 +13,7 @@ public class Board
 
 	// TODO add javadoc comment
 	// @formatter:off
-	private final static BoardRowContent[] INITIAL_BOARD_CONTENT =
+	public final static BoardRowContent[] INITIAL_BOARD_CONTENT =
 			new BoardRowContent[]
 			{ 
 				// Row 0
@@ -243,8 +243,10 @@ public class Board
 	public boolean isMouvementValid(Move mouvement)
 	{
 		if(this.boardLocations[mouvement.getStartPosition().getNumRow()][mouvement.getStartPosition().getNumCol()] != BoardLocationState.RED)
+		{	
+			System.out.println("Mouvement Invalide !");
 			return false;
-			
+		}
 		return true;
 	}
 	
@@ -269,7 +271,7 @@ public class Board
 	// TODO add javadoc comment
 	public void processMove(Move mouvement)
 	{
-		// TODO Auto-generated method stub
-		
+		this.boardLocations[mouvement.getStartPosition().getNumRow()][mouvement.getStartPosition().getNumCol()] = BoardLocationState.EMPTY;
+		this.boardLocations[mouvement.getEndPosition().getNumRow()][mouvement.getEndPosition().getNumCol()] = BoardLocationState.RED;
 	}
 }

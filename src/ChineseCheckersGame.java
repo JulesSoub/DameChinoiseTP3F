@@ -75,9 +75,10 @@ public class ChineseCheckersGame
 			{
 				mouvement = this.players[currentPlayerNumber].askForMove();
 			}
-			while(!this.board.isMouvementValid(mouvement));
+			while(mouvement == null || !this.board.isMouvementValid(mouvement));
 			
 			this.board.processMove(mouvement);
+			System.out.println(this.board.toString());
 		}
 		
 		System.out.println("Game finished");
